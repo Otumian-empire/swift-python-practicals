@@ -1,0 +1,1 @@
+""" Using the new concept in this exercise and the white space character, newline - `\n` , write a program that accepts from the user, inputs, name, age, sex and hobby. Output a descriptive essay of the values taken. """
