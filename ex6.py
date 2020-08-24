@@ -103,11 +103,11 @@ Design:
 
 """
 
-first_name = input('Enter first name: ').lower() or ''
-last_name = input('Enter last name: ').lower() or ''
-date_of_birth = input('Enter date of birth[2nd April, 2020 or 2-4-2020]: ').lower() or ''
+first_name = input('Enter first name: ').lower()
+last_name = input('Enter last name: ').lower()
+date_of_birth = input('Enter date of birth[2nd April, 2020 or 2-4-2020]: ').lower()
 
-marital_status = input('\nEnter marital status[married, single, divorced, other]: ').lower() or ''
+marital_status = input('\nEnter marital status[married, single, divorced, other]: ').lower()
 
 educations = []
 
@@ -132,9 +132,9 @@ print('\nEnter your expectations: ')
 while(expectation:= input('Enter expectation: ')):
     expectations.append(expectation)
 
-hobby = input('\nEnter hobby: ') or ''
+hobby = input('\nEnter hobby: ')
 
-recent_job = input('\nEnter recent job: ') or ''
+recent_job = input('\nEnter recent job: ')
 
 print('\nBio:')
 print(f'\tfull name: {first_name} {last_name}')
