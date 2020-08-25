@@ -19,14 +19,14 @@ of 2, 3 or both 2 and 3 and then print what multiple it is with the input.
 '''
 
 try:
-  user_number = int(input("Enter a number: "))
+    user_number = int(input("Enter a number: "))
 
-  if user_number % 2 == 0 and user_number % 3 == 0:
-    print(f'{user_number} is a multitple of 2 and 3')
-  elif user_number % 2 == 0:
-    print(f'{user_number} is a multitple of 2')
-  elif user_number % 3 == 0:
-    print(f'{user_number} is a multitple of 3')
+    if user_number % 2 == 0 and user_number % 3 == 0:
+        print(f'{user_number} is a multitple of 2 and 3')
+    elif user_number % 2 == 0:
+        print(f'{user_number} is a multitple of 2')
+    elif user_number % 3 == 0:
+        print(f'{user_number} is a multitple of 3')
 
 except ValueError as e:
-  print(f"Please enter a number: {str(e)}")
+    print(f"Please enter a number: {str(e)}")

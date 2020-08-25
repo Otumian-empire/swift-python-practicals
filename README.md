@@ -7,6 +7,7 @@ This repo has some implementations of the practicals in the [swift python book][
 - know some git
 - work on individual practicals
 - or work on a whole new version of practicals
+- fix typos in [swift python book][swift-python-link]
 
 #
 [swift-python-link]:https://github.com/otumian-empire/swift-python
