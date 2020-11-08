@@ -46,11 +46,12 @@ def abs_(n):
 
 def sort_list(item=[]):
     item_length = len(item)
-
-    for i in range(item_length):
-        for j in range(item_length - 1):
-            if item[j] > item[j + 1]:
-                item[j], item[j + 1] = item[j + 1], item[j]
+    
+    if item_length > 1:
+        for i in range(item_length):
+            for j in range(item_length - 1):
+                if item[j] > item[j + 1]:
+                    item[j], item[j + 1] = item[j + 1], item[j]
 
     return item
 
