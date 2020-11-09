@@ -98,36 +98,55 @@ def freq_counter(items=[]):
 
 ############################# part 4 #############################
 
+# def index_parity(items=[]):
+#     if len(items) < 2:
+#         return items
+#     i = 1
+#     while True:
+#         if i < len(items) - 1:
+#             if (i + 1) % 2 == items[i] % 2:
+#                 items.remove(items[i])
+#             else:
+#                 i += 1
+#         else:
+#             break
+#     return items
+
+
+# def index_parity(items=[]):
+#     if len(items) > 1:
+#         i = 1
+#         while True and:
+#             if i >= len(items) - 1:
+#                 break
+#             if (i + 1) % 2 == items[i] % 2:
+#                 items.remove(items[i])
+#             else:
+#                 i += 1
+#     return items
+
+
+# def index_parity(items=[]):
+#     if len(items) > 1:
+#         i = 1
+#         while True and i < len(items) - 1:
+#             if (i + 1) % 2 == items[i] % 2:
+#                 items.remove(items[i])
+#             else:
+#                 i += 1
+#     return items
+
+
 def index_parity(items=[]):
-    # i = 1
-    # while True:
-    #     size = len(items)
-    #     if size > 2 and i < size:
-    #         if (items[i] + 1) % 2 == items[i] % 2:
-    #             del items[i]
-    #         else:
-    #             i += 1
-    #     else:
-    #         break
-
-    # return items
-    pass
-
-
-# s = [2, 6, 18, 11, 4]
-# print(index_parity(s))
-
-# i = 1
-# while True:
-#     if len(s) > 2:
-#         del s[i]
-#     else:
-#         break
-# print(len(s))
+    if len(items) > 1:
+        i = 1
+        while i < len(items) - 1:
+            is_same_parity = (i + 1) % 2 == items[i] % 2
+            items.remove(items[i]) if is_same_parity else (i := i + 1)
+    return items
 
 
 ############################# part 5 #############################
-
 def same_parity(items=[]):
     first_item = items[0]
     pars = [first_item, ]
