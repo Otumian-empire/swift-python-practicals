@@ -1,0 +1,2 @@
+""" 
+For a second version of this program, let a method take 3 args, operator, first_operand, second_operand. Instead of calling any of the methods such as add, just call, evaluate with arguments such as evaluate('+', 2, 5) to return 7. This should work even if the second and third arguments are in a form of strings such as evaluate('+', '2', '5') . """
