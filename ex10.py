@@ -1,6 +1,6 @@
 # ex10.py
 '''
-Write a program that checks if a given integer input is a multiple 
+Write a program that checks if a given integer input is a multiple
 of 2, 3 or both 2 and 3 and then print what multiple it is with the input.
 
 # the code should behave this way
