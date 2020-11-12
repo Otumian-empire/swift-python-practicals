@@ -37,14 +37,47 @@ FROM
     file_stat;
 
 -- 
--- create table for part2.py, file_stat2
--- table file_stat2: id, file_name, num_lines, num_words, chars_ws, chars_wos , created_at
-CREATE TABLE IF NOT EXISTS "file_stat" (
+-- create table for part3.py, bkpfile
+-- table bkpfile: id, file_name, file_content, created_at
+-- SInce this is basically to backup files, we do not need a 
+-- duplicate of it, thus we make the file name unique
+-- update file_content when file_name already exist and update thr create time.
+CREATE TABLE IF NOT EXISTS "bkpfile" (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    "file_name" TEXT NOT NULL,
-    "num_lines" INTEGER NOT NULL,
-    "num_words" INTEGER NOT NULL,
-    "chars_ws" INTEGER NOT NULL,
-    "chars_wos" INTEGER NOT NULL,
+    "file_name" TEXT NOT NULL UNIQUE,
+    "file_content" Text NOT NULL,
     "created_at" TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
-);
+) COMMIT;
+
+-- insert
+INSERT INTO
+    bkpfile(file_name, file_content)
+VALUES
+    (?, ?);
+
+-- read file_content by file name
+SELECT
+    file_content
+FROM
+    bkpfile
+WHERE
+    file_name = "";
+
+-- read file_name and created_at for the screen
+SELECT
+    id,
+    file_name,
+    created_at
+FROM
+    bkpfile
+WHERE
+    file_name = "";
+
+-- Update
+UPDATE
+    bkpfile
+SET
+    file_content = ?,
+    created_at = CURRENT_TIMESTAMP
+WHERE
+    file_name = ?;
