@@ -1,2 +1,4 @@
 .vscode
 __pycache__
+file_db
+ex25/file_stat.sql
