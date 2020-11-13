@@ -93,7 +93,7 @@ class FileBackUp:
                 print("File name is required for recovery")
         except FileNotFoundError:
             print("Please provide an existing file path")
-        excepfbkpt UnicodeDecodeError:
+        except UnicodeDecodeError:
             print("Please a file other than a binary")
 
     def _read_all_bkpfile(self):
@@ -115,7 +115,7 @@ class FileBackUp:
             else:
                 print("File backup unsuccessful")
 
-        excepfbkpt sqlite3.Error as e:
+        except sqlite3.Error as e:
             print(e)
 
     def _update(self, file_name=""):
@@ -159,17 +159,17 @@ if __name__ == "__main__":
     # no flag passed: read the save backups
 
     # TODO: Add deleting of backup
-    # TODO: Find a better to save the file content in the database, 
+    # TODO: Find a better to save the file content in the database,
     # think security and efficiency
-    
+
+    fbkp = FileBackUp()
+
     if len(sys.argv) > 1:
         try:
             flag = sys.argv[1].lower()
 
             if flag in ["backup", "-b", "recover", "-r"]:
                 file_name = sys.argv[2]
-fbkp
-                fbkp = FileBackUp()
 
                 if flag in ["backup", "-b"]:
                     fbkp._insert(file_name)
@@ -184,4 +184,5 @@ fbkp
         except:
             print("flag and filename required")
 
-    else:fbkpfbkp
+    else:
+        fbkp._read_all_bkpfile()
