@@ -27,7 +27,7 @@ user_input = input('Enter your first name: ')
 user_input_size = len(user_input)
 
 print(f'{user_input} - {user_input_size}')
-
+print()
 
 """
 Problem Summary:

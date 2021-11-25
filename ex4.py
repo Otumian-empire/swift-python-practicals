@@ -31,4 +31,3 @@ print(v)
 
 s = ((a + b) % 2) - ((b % a) + 1)
 print(s)
-

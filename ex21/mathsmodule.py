@@ -19,7 +19,7 @@ class MathsModule:
 
         return diff
 
-    def mult(self,  *args):
+    def mult(self, *args):
         total = 1
 
         for arg in args:
@@ -33,6 +33,7 @@ class MathsModule:
     def div(self, a, b):
         if self.is_number(a) and self.is_number(b) and b != 0:
             return a / b
+
         return None
 
     def floor_div(self, *args):
@@ -52,11 +53,13 @@ class MathsModule:
     def pow(self, a, b):
         if self.is_number(a) and self.is_number(b) and a != 0:
             return a ** b
+
         return None
 
     def mod(self, a, b):
         if self.is_number(a) and self.is_number(b) and b != 0:
             return a % b
+            
         return None
 
     @staticmethod

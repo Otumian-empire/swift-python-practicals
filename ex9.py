@@ -49,26 +49,28 @@ IS_FALSE = False
 TEN_MG = 10
 TWO_CHARS = 2
 TWENTY_CHARS = 20
-RECOMENDED_IMAGE_SIZE = 120
-RECOMENDED_IMAGE_EXTENSION = 'jpeg'
+RECOMMENDED_IMAGE_SIZE = 120
+RECOMMENDED_IMAGE_EXTENSION = 'jpeg'
 
 
 if image_size <= TEN_MG:
     print(f"Please select an image with a more bigger size than {TEN_MG}")
-elif image_size > RECOMENDED_IMAGE_SIZE:
-    print(f'Please do not upload an with size more than {RECOMENDED_IMAGE_SIZE}')
+elif image_size > RECOMMENDED_IMAGE_SIZE:
+    print(
+        f'Please do not upload an with size more than {RECOMMENDED_IMAGE_SIZE}')
 else:
     chars_in_image_name = len(image_name)
 
     if not chars_in_image_name < TWO_CHARS and not chars_in_image_name >= TWENTY_CHARS:
 
-        if image_extension != RECOMENDED_IMAGE_EXTENSION:
-            print(f"Recommend image extension is {RECOMENDED_IMAGE_EXTENSION}")
+        if image_extension != RECOMMENDED_IMAGE_EXTENSION:
+            print(
+                f"Recommend image extension is {RECOMMENDED_IMAGE_EXTENSION}")
         else:
 
             is_free_image = IS_TRUE if image_is_free == 'y' or image_is_free == 'yes' else IS_FALSE
 
-            print('\n')
+            print()
             print(f"Image summary")
             print(f"Name: {image_name}")
             print(f"Extension: {image_extension}")
@@ -76,4 +78,5 @@ else:
             print(f"Free: {is_free_image}")
 
     else:
-        print(f'please, image name should be between {TWO_CHARS} and {TWENTY_CHARS}')
+        print(
+            f'please, image name should be between {TWO_CHARS} and {TWENTY_CHARS}')

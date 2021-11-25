@@ -33,6 +33,7 @@ class TodoApp:
         if task:
             todos.append(task)
             return True
+
         return False
 
     def readall(self):
@@ -43,6 +44,7 @@ class TodoApp:
 
         if is_bounded_index(index):
             return todos[index]
+
         return ''
 
     def update(self, index, task):
@@ -51,6 +53,7 @@ class TodoApp:
         if is_bounded_index(index):
             todos[index] = task
             return True
+
         return False
 
     def deleteall(self):
@@ -62,6 +65,7 @@ class TodoApp:
         if is_bounded_index(index):
             del todos[index]
             return True
+
         return False
 
 
@@ -79,10 +83,11 @@ while True:
     clear_screen()
 
     print(message)
-    command = input("command>>> ")
+    command = input("command >>> ")
 
     if command == '1':
-        task = input("task>>> ")
+        task = input("task >>> ")
+
         if TodoApp().add(task):
             print("Task added")
         else:
@@ -90,17 +95,19 @@ while True:
 
     elif command == '2':
         todos_ = TodoApp().readall()
+
         for i in range(len(todos_)):
             print(i, todos[i])
 
     elif command == '3':
-        index = input("index>>> ")
+        index = input("index >>> ")
         task = TodoApp().read(index)
         print(task)
 
     elif command == '4':
-        index = input("index>>> ")
-        task = input("task>>> ")
+        index = input("index >>> ")
+        print(f'Task: {todos[int(index)]}')
+        task = input("task >>> ")
 
         if TodoApp().update(index, task):
             print("Task updated")
@@ -112,7 +119,7 @@ while True:
         print("Deleted all task")
 
     elif command == '6':
-        index = input("index>>> ")
+        index = input("index >>> ")
         if TodoApp().delete(index):
             print("Task deleted")
         else:

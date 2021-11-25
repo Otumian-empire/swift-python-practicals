@@ -1,6 +1,6 @@
 """ Analyse and design a solution for the following problems.
 
-1. Given that a quadratic equation is of the form, Ax^2 + Bx + C = 0 , where A , B , C are real parameters such that A , B is not zero. A and B are the co-efficients of x , of second and first degrees respectively and c a constant. Find and output the roots of the quadratic equation.
+1. Given that a quadratic equation is of the form, Ax^2 + Bx + C = 0 , where A , B , C are real parameters such that A , B is not zero. A and B are the co-efficient of x , of second and first degrees respectively and c a constant. Find and output the roots of the quadratic equation.
 
 2. Find the Area of a circle of radius, r , given that PI is 3.143 .
 

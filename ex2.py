@@ -1,4 +1,4 @@
-# 1. Look into Exercise 1 ( creating a variable) , and for the 10 varaibles we created earlier, state their data types
+# 1. Look into Exercise 1 ( creating a variable) , and for the 10 variables we created earlier, state their data types
 
 age = 20  # integer
 name = "tuna"  # string
@@ -13,7 +13,7 @@ number_of_scripts = 100  # integer
 file_writer = "this is a file writer"  # string
 
 dob = '31/13/3001'  # string
-date_of_birth = '32nd Minuamber, 1963'  # string
+date_of_birth = '32nd November, 1963'  # string
 birth_date = 'April 1, 1976'  # string
 
 person_1 = "daniel"  # string

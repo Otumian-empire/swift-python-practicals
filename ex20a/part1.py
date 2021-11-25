@@ -1,5 +1,5 @@
 """
-    Re-write the Rectangle class, and check for execptions.
+    Re-write the Rectangle class, and check for exceptions.
 
     ```
     # create a file, with name rectangle.py
@@ -30,10 +30,10 @@
     area = rect_inst.area()
 
     # get the perimeter
-    perrmeter = rect_inst.perimeter()
+    perimeters = rect_inst.perimeter()
 
     print(
-        f"The area and perimeter of the rectangle are, {area} and {perrmeter} respectively")
+        f"The area and perimeter of the rectangle are, {area} and {perimeter} respectively")
 ```
 """
 
@@ -50,6 +50,7 @@ class Rectangle:
 
             self.length = length
             self.breadth = breadth
+            
         except Exception as e:
             print("int or float args required")
             return None

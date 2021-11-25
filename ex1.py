@@ -13,7 +13,7 @@ number_of_scripts = 100
 file_writer = "this is a file writer"
 
 dob = '31/13/3001'
-date_of_birth = '32nd Minuamber, 1963'
+date_of_birth = '32nd November, 1963'
 birth_date = 'April 1, 1976'
 
 person_1 = "daniel"

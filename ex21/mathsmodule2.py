@@ -10,13 +10,13 @@ class MathsModule2:
         self.op = op
         self.a = a
         self.b = b
-        self.opearations = [self.add, self.subtr, self.mult,
+        self.operations = [self.add, self.subtr, self.mult,
                             self.div, self.floor_div, self.pow, self.mod]
         try:
             if self.is_number(self.a) and self.is_number(self.b):
                 if self.op in self.OPERATORS:
                     index = self.OPERATORS.index(self.op)
-                    return self.opearations[index]()
+                    return self.operations[index]()
 
         except Exception as e:
             print(

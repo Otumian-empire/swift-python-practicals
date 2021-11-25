@@ -55,4 +55,3 @@ class DocStat:
             """
 
         return doc_stat_info
-

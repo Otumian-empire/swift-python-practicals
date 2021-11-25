@@ -22,6 +22,7 @@ class FileStatDB:
         try:
             self.conn = sqlite3.connect(DATABASENAME)
             self.cur = self.conn.cursor()
+
         except sqlite3.Error as e:
             self.cur = None
             print(e)
@@ -117,6 +118,7 @@ def doc_stats(filename=""):
 
                     else:
                         print("File stat not saved")
+                        
         except FileNotFoundError:
             print("Please provide an existing file path")
         except UnicodeDecodeError:

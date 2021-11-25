@@ -1,5 +1,5 @@
 # ex11.py
-'''
+"""
     * write a lift off program using a for loop
 
     * Given a list of alphabets, from a - z , 
@@ -16,35 +16,36 @@
     and else statement ( if necessary) and then
      print the number of times a particular number 
     was obtained when the dice was rolled.
-'''
+"""
 
 
 # write a lift off program using a for loop
 
-print('lift of in ')
+from random import randint
+print("lift of in ")
 for i in range(5):
     if i < 4:
-        print(i, end=', ')
+        print(i, end=", ")
     else:
         print(i)
 
-print('Good job!!')
+print("Good job!!")
 print()
 
 
 # Given a list of alphabets, from a - z , use a loop to print out the vowels
 
 alphabets = [
-    'a', 'b', 'c', 'd',
-    'e', 'f', 'g', 'h',
-    'i', 'j', 'k', 'l',
-    'm', 'n', 'o', 'p',
-    'q', 'r', 's', 't',
-    'u', 'v', 'w', 'x',
-    'y', 'z'
+    "a", "b", "c", "d",
+    "e", "f", "g", "h",
+    "i", "j", "k", "l",
+    "m", "n", "o", "p",
+    "q", "r", "s", "t",
+    "u", "v", "w", "x",
+    "y", "z"
 ]
 
-vowels = ['a', 'e', 'i', 'o', 'u']
+vowels = ["a", "e", "i", "o", "u"]
 
 for letter in alphabets:
     if letter in vowels:
@@ -55,7 +56,6 @@ print()
 
 # a program that simulates the rolling of a dice
 
-from random import randint
 
 # the fair dices have values
 # 1 2 3 4 5 6 which has indices of
@@ -66,14 +66,16 @@ simulation_result = [0, 0, 0, 0, 0, 0]
 
 try:
     number_of_simulations = int(
-        input('Enter the number of times the simulation should run: '))
+        input("Enter the number of times the simulation should run: "))
 
     while number_of_simulations <= 50:
         number_of_simulations = int(
-            input('Enter the number of times the simulation should run (50 <): '))
+            input(
+                "Enter the number of times the simulation should run (50 <): "))
 
 except ValueError:
-    print('You are supposed to enter a number, as such this willbe simulated 51 times')
+    print("You are supposed to enter a number, as such this will", end=" ")
+    print("be simulated 51 times")
     number_of_simulations = 51
 
 for i in range(number_of_simulations):
@@ -87,7 +89,7 @@ for i in range(number_of_simulations):
 
     simulation_result[roll_value_index] += 1
 
-print(f'Simulation results for {number_of_simulations} rolls')
+print(f"Simulation results for {number_of_simulations} rolls")
 
 for i in range(6):
-    print(f'{i + 1}: {simulation_result[i]}')
+    print(f"{i + 1}: {simulation_result[i]}")

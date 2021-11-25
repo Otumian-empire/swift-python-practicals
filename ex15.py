@@ -68,6 +68,7 @@ def index_parity(items=tuple()):
                 items = list(items)
                 items.remove(items[i])
                 items = tuple(items)
+
             else:
                 i += 1
 

@@ -1,16 +1,16 @@
 # mathsmodule
 
-Swyft-python-practical, ex21.
+Swift-python-practical, ex21.
 
 ## Developer
 
-- alias: otumian-empire
+- alias: Otumian-empire
 - email: popecan@gmail.com
 - github: otumian-empire@github.com
 
 ## What the module is about
 
-This is a simple arithmatic scripts that performs addition, subtraction, multiplication and divsion.
+This is a simple arithmetic scripts that performs addition, subtraction, multiplication and division.
 
 ## How to use the module
 

@@ -21,9 +21,10 @@ class MyMath:
             return self.a / self.b
         return None
 
-    def int_dive(self):
+    def int_div(self):
         if self.b != 0:
             return self.a // self.b
+
         return None
 
     def pow(self):
@@ -32,7 +33,4 @@ class MyMath:
     def modulo(self):
         return self.a % self.b
 
-    def int_dive(self):
-        if self.b != 0:
-            return self.a // self.b
-        return None
+ 

@@ -24,7 +24,8 @@ if (B ** 2) >= (4*A*C):
 
     print(x1, x2)
 else:
-    print("There is some dumb error - actually there is not but some complex numbers")
+    print("There is some dumb error - actually there is not", end=" ")
+    print("but some complex numbers")
 
 
 """
@@ -66,4 +67,6 @@ profit = selling_price - cost_price
 profit_percentage = (profit * 100) / cost_price
 tax_percentage = (tax * 100) / cost_price
 
-print(f"selling price:  {selling_price}, profit: {profit}, profit percentage: {profit_percentage}, tax percentage: {tax_percentage}")
+print(
+    f"selling price:  {selling_price}, profit: {profit}, profit percentage:\
+         {profit_percentage}, tax percentage: {tax_percentage}")

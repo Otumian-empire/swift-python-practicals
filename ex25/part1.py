@@ -45,6 +45,7 @@ class FileStatDB:
         try:
             self.conn = sqlite3.connect(DATABASENAME)
             self.cur = self.conn.cursor()
+
         except sqlite3.Error as e:
             self.cur = None
             print(e)
@@ -87,7 +88,6 @@ class FileStatDB:
 
         if self.cur != None:
             self.conn.commit()
-
             return True
 
         return False

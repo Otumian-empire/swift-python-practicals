@@ -1,9 +1,9 @@
 """ 
     Create a function for each of the following, using any means possible without cutting corners.( no using of built-in function - we have to try our best)
         addition - this function takes two objects as argument, and returns their sum if they are numbers, that is a float or an int.
-        subtraction - this function takes two objects as argument, returns the resut of subtracting the second from the first.
+        subtraction - this function takes two objects as argument, returns the result of subtracting the second from the first.
         division - this function takes two objects as argument, returns the result from dividing the first by the second. Remember that zero division is not allowed thus check if the second is zero.
-        multplication - this function takes two objects as argument, returns the product of the two.
+        multiplication - this function takes two objects as argument, returns the product of the two.
 
     Write a function, that takes a list of various objects as an argument, return a list of all the objects that are numbers ( that is integer and float).
 
@@ -142,7 +142,12 @@ def index_parity(items=[]):
         i = 1
         while i < len(items) - 1:
             is_same_parity = (i + 1) % 2 == items[i] % 2
-            items.remove(items[i]) if is_same_parity else (i := i + 1)
+            # items.remove(items[i]) if is_same_parity else (i := i + 1) # py3.8
+            if is_same_parity:
+                items.remove(items[i])
+            else:
+                i = i + 1
+
     return items
 
 
