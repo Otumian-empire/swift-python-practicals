@@ -72,7 +72,7 @@ def filter_number(item=[]):
 
 
 ############################# part 3 #############################
-
+                
 def freq_counter(items=[]):
     types = []
     count = []

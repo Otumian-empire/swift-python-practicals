@@ -30,24 +30,27 @@ VALUES
     ("Yoel Romero", "12-12-1988"),
     ("Dibir Zagirov", "12-12-1987");
 
--- SELECT(read)
+-- SELECT(read) all from the users table
 SELECT
     *
 FROM
     users;
 
+-- SELECT(read) the fullname of all users
 SELECT
     fullname
 FROM
     users;
 
+-- SELECT(read) the dateofbirth and created_at, of all the users
 SELECT
     dateofbirth,
     created_at
 FROM
     users;
 
--- UPDATE
+-- UPDATE, change all the users fullname to "Yamaha Tanaka" 
+-- for all users with id > 2 
 UPDATE
     users
 SET
@@ -55,6 +58,8 @@ SET
 WHERE
     id > 2;
 
+-- UPDATE, change all the users created_at to the current timestamp
+-- for all users with id < 2 
 UPDATE
     users
 SET
@@ -62,23 +67,28 @@ SET
 where
     id < 4;
 
+
+-- UPDATE, dateofbirth to "02-02-1990" for user with 
+-- fullname = "Israel Adesanye"
 UPDATE
     users
 SET
     dateofbirth = "02-02-1990"
 WHERE
-    fullname = "Isral Adesanye";
+    fullname = "Israel Adesanye";
 
--- DELETE
+-- DELETE, delete all users that have "ar" in their fullname
 DELETE FROM
     users
 WHERE
     fullname like "%ar%";
 
+-- DELETE, delete user with id = 9
 DELETE FROM
     users
 WHERE
     id = 9;
 
+-- DELETE, the end, delete everything in the users table
 DELETE FROM
     users;

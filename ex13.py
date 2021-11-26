@@ -46,7 +46,7 @@ def abs_(n):
 
 def sort_list(item=[]):
     item_length = len(item)
-    
+
     if item_length > 1:
         for i in range(item_length):
             for j in range(item_length - 1):
@@ -57,11 +57,16 @@ def sort_list(item=[]):
 
 
 def min_max(iterable=[]):
-    result = 0
+    min_index = 0
+    last_index = len(iterable) - 1
+
+    result = ()
 
     try:
         sorted_iterable = sort_list(iterable)
-        result = (sorted_iterable[0], sorted_iterable[len(iterable) - 1])
+        result = (sorted_iterable[min_index],
+                  sorted_iterable[last_index])
+
     except Exception:
         print('The iterable must not be empty')
     finally:

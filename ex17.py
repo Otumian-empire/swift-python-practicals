@@ -3,7 +3,7 @@
     Write a function that removes items with duplicate values
     Write a function that reverses a dictionary
     Write a function that sorts a dictionary by Key then value ( 2 functions)
-    Write a function that takes a dictionary as an argument, return another dictionary that has the frequencey of the length of the value, if value is int or float, frequencey is number of digits. Keep the keys of the old as the new.
+    Write a function that takes a dictionary as an argument, return another dictionary that has the frequency of the length of the value, if value is int or float, frequency is number of digits. Keep the keys of the old as the new.
 """
 
 
@@ -85,6 +85,8 @@ def sort_dict_val(dict_item=dict()):
 
 
 # return a dictionary of the number of digits in the value of a dictionary
+# consider rewriting to cases where dict_item value is a list, set,
+# tuple or dict
 def dict_freq(dict_item=dict()):
     new_dict = {}
 
@@ -92,6 +94,8 @@ def dict_freq(dict_item=dict()):
         num_digits = len(str(val))
 
         if type(val) == float:
+            # split at . and sum the len of each part
+            # num_digits = sum([len(part) for part in str(val).split('.')])
             num_digits -= 1
 
         new_dict[key] = num_digits

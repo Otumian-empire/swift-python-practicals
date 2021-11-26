@@ -74,4 +74,4 @@ def cru_file(filename, mode, content=""):
         else:
             print("Unknown mode")
     except Exception as e:
-        print(err, str(e))
+        print(e)
